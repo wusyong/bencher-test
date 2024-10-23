@@ -23,12 +23,6 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.number }}/head
           fetch-depth: 0
-      - name: Bootstrap dependencies
-        run: |
-          python3 -m pip install --upgrade pip
-          sudo apt update
-          sudo apt install -qy --no-install-recommends mesa-vulkan-drivers
-          python3 ./mach bootstrap --skip-lints
       - uses: sagudev/bencher@github-checks
       # - name: Set bencher opts for PRs (label try run)
       #   if: github.event_name == 'pull_request_target'
