@@ -5,7 +5,7 @@ env:
   RUST_BACKTRACE: 1
   SHELL: /bin/bash
   # These options are always constant
-  CONST_BENCHER_OPTIONS: --project dklassic-servo --token ${{ secrets.BENCHER_API_TOKEN }} bencher mock --testbed ubuntu-22.04
+  CONST_BENCHER_OPTIONS: --project dklassic-servo --token ${{ secrets.BENCHER_API_TOKEN }} --testbed ubuntu-22.04
 
 jobs:
   linux-bencher:
@@ -60,4 +60,4 @@ jobs:
       #     bencher run --adapter json --file b.json ${{ env.CONST_BENCHER_OPTIONS }} $RUN_BENCHER_OPTIONS
       - name: Send results
         run: |
-          bencher run ${{ env.CONST_BENCHER_OPTIONS }} $RUN_BENCHER_OPTIONS
+          bencher run --adapter json --file test.json ${{ env.CONST_BENCHER_OPTIONS }} $RUN_BENCHER_OPTIONS
