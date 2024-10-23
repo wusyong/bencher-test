@@ -23,12 +23,6 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.number }}/head
           fetch-depth: 0
-      - uses: actions/download-artifact@v4
-        with:
-          name: release-binary-linux
-          path: release-binary-linux
-      - name: unPackage binary
-        run: tar -xzf release-binary-linux/target.tar.gz
       - name: Bootstrap dependencies
         run: |
           python3 -m pip install --upgrade pip
