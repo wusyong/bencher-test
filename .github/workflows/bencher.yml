@@ -60,4 +60,4 @@ jobs:
       #     bencher run --adapter json --file b.json ${{ env.CONST_BENCHER_OPTIONS }} $RUN_BENCHER_OPTIONS
       - name: Send results
         run: |
-          bencher run --adapter json --file test.json ${{ env.CONST_BENCHER_OPTIONS }} $RUN_BENCHER_OPTIONS
+          bencher run ${{ env.CONST_BENCHER_OPTIONS }} $RUN_BENCHER_OPTIONS bencher mock
