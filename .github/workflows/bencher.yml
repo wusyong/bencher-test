@@ -23,7 +23,7 @@ jobs:
         with:
           ref: refs/pull/${{ github.event.number }}/head
           fetch-depth: 0
-      - uses: sagudev/bencher@github-checks
+      - uses: dklassic/bencher@github-checks
       # - name: Set bencher opts for PRs (label try run)
       #   if: github.event_name == 'pull_request_target'
       #   run: |
