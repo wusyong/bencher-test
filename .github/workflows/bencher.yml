@@ -5,7 +5,7 @@ env:
   RUST_BACKTRACE: 1
   SHELL: /bin/bash
   # These options are always constant
-  CONST_BENCHER_OPTIONS: --project dklassic-s-project --token ${{ secrets.BENCHER_API_TOKEN }} --testbed ubuntu-22.04
+  CONST_BENCHER_OPTIONS: --project dklassic-servo --token ${{ secrets.BENCHER_API_TOKEN }} --testbed ubuntu-22.04
 
 jobs:
   linux-bencher:
