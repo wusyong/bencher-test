@@ -42,7 +42,7 @@ jobs:
         run: |
             echo "RUN_BENCHER_OPTIONS=--branch try \
             --hash $(git rev-parse HEAD~1) \
-            --branch-start-point main \
+            --branch-start-point try \
             --branch-start-point-hash $(git rev-parse HEAD) \
             --branch-reset" >> "$GITHUB_ENV"
       # - name: File size
