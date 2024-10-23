@@ -43,7 +43,7 @@ jobs:
             echo "RUN_BENCHER_OPTIONS=--branch try \
             --hash $(git rev-parse HEAD~1) \
             --branch-start-point main \
-            --branch-start-point-hash $(git merge-base main HEAD) \
+            --branch-start-point-hash $(git merge-base main try) \
             --branch-reset" >> "$GITHUB_ENV"
       # - name: File size
       #   run: ./mach test-size -r --bmf-output size.json
