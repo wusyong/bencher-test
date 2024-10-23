@@ -1,6 +1,5 @@
 name: Linux WPT Tests
-on:
-  workflow_call:
+on: push
 
 env:
   RUST_BACKTRACE: 1
