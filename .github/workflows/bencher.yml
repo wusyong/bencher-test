@@ -5,7 +5,7 @@ env:
   RUST_BACKTRACE: 1
   SHELL: /bin/bash
   # These options are always constant
-  CONST_BENCHER_OPTIONS: --project dklassic-servo --token ${{ secrets.BENCHER_API_TOKEN }} --testbed ubuntu-22.04
+  CONST_BENCHER_OPTIONS: --project wusyong-s-project --token ${{ secrets.BENCHER_API_TOKEN }} --testbed ubuntu-22.04
 
 jobs:
   linux-bencher:
@@ -42,7 +42,7 @@ jobs:
         run: |
             echo "RUN_BENCHER_OPTIONS=--branch try \
             --hash $(git rev-parse HEAD~1) \
-            --branch-start-point main \
+            --branch-start-point try \
             --branch-start-point-hash $(git rev-parse HEAD) \
             --branch-reset" >> "$GITHUB_ENV"
       # - name: File size
